@@ -15,7 +15,7 @@ jobs:
       - name: Clone Sourcepawn
         run: git clone https://github.com/alliedmodders/sourcepawn.git
       - name: Setup ambuild
-        working-dir: ./sourcepawn
+        working-directory: ./sourcepawn
         run: |
           git clone https://github.com/alliedmodders/ambuild.git
           pip install ./ambuild
@@ -24,7 +24,7 @@ jobs:
           AM_ARCH=x86
           AM_TYPE=optimize
       - name: Build
-        working-dir: ./sourcepawn
+        working-directory: ./sourcepawn
         run: |
           mkdir objdir
           cd objdir
