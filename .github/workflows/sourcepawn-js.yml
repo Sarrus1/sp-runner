@@ -1,0 +1,17 @@
+name: Deploy Extension
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - run: git clone https://github.com/emscripten-core/emsdk.git && cd emsdk
+      - run: ./emsdk install latest
+      - run: ./emsdk activate latest
+      - run: source ./emsdk_env.sh && cd ..
