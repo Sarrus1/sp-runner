@@ -16,3 +16,6 @@ jobs:
       - run: ./emsdk install latest
       - run: ./emsdk activate latest
       - run: source ./emsdk_env.sh && cd ..
+      - run: cd .. && git clone https://github.com/alliedmodders/sourcepawn.git
+      - run: cd sourcepawn && git clone https://github.com/alliedmodders/ambuild.git
+      - run: pip install ./ambuild
