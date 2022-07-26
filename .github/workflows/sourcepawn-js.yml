@@ -14,4 +14,4 @@ jobs:
       - uses: mymindstorm/setup-emsdk@v11
       - run: git clone https://github.com/alliedmodders/sourcepawn.git
       - run: cd sourcepawn && git clone https://github.com/alliedmodders/ambuild.git
-      - run: pip install ./ambuild
+      - run: ls && pip install ./ambuild
