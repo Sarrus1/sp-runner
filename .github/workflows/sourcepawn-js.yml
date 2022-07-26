@@ -24,6 +24,7 @@ jobs:
         env:
           CC: emcc
           CXX: em++
+          EMSCRIPTEN: $EMSDK/fastcomp/emscripten
         run: |
           mkdir objdir
           cd objdir
