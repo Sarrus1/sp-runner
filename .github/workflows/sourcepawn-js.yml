@@ -11,7 +11,8 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-      - run: git clone https://github.com/emscripten-core/emsdk.git && cd emsdk
+      - run: git clone https://github.com/emscripten-core/emsdk.git
+      - run: cd emdsk
       - run: ./emsdk install latest
       - run: ./emsdk activate latest
       - run: source ./emsdk_env.sh && cd ..
