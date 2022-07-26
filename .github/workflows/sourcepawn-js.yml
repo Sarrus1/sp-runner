@@ -28,5 +28,5 @@ jobs:
         run: |
           mkdir objdir
           cd objdir
-          python ../configure.py --enable-optimize --targets=x86
+          python ../configure.py --enable-optimize --targets=unknown
           ambuild
