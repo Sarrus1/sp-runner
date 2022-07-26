@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
     steps:
       - run: git clone https://github.com/emscripten-core/emsdk.git
-      - run: ls
+      - run: cd emsdk && ls
       - run: ./emsdk install latest
       - run: ./emsdk activate latest
       - run: source ./emsdk_env.sh && cd ..
